@@ -44,9 +44,9 @@ export default {
     return {
       activeName: 'first',
       form: {
-        lng: '',
-        lat: '',
-        radius: ''
+        lng: '119.23476',
+        lat: '26.052788',
+        radius: '5'
       },
       res: ''
     }
@@ -90,5 +90,10 @@ export default {
 .el-icon-search {
   margin-left: 5px !important;
   margin-top: 10px !important;
+}
+::v-deep .el-tabs__nav-scroll{
+  width: 50%!important;
+  margin: 0 auto!important;
+  margin-left: 180px !important;
 }
 </style>

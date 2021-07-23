@@ -7,8 +7,9 @@
                class="bm-view">
     </baidu-map>
     <left></left>
-    <live-tab></live-tab>
     <div>
+      <live-tab>aaaaaaaa</live-tab>
+      <div>aaaaa</div>
       <button @click='setcenter(lng,lat)'>setcenter</button>
     </div>
   </div>
