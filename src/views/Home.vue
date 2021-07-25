@@ -1,14 +1,13 @@
 <!--  -->
 <template>
   <div class=''>
-    <baidu-map :center="center"
-               :zoom="zoom"
-               @ready="handler"
-               class="bm-view">
+    <baidu-map class="bm-view"
+               :center="center"
+               :zoom="zoom">
     </baidu-map>
     <left></left>
     <div>
-      <live-tab>aaaaaaaa</live-tab>
+      <live-tab></live-tab>
       <div>aaaaa</div>
       <button @click='setcenter(lng,lat)'>setcenter</button>
     </div>
@@ -16,6 +15,7 @@
 </template>
 
 <script>
+
 import Left from '../components/Left.vue'
 import LiveTab from '../components/LiveTab.vue'
 
@@ -32,16 +32,7 @@ export default {
   computed: {},
   watch: {},
   methods: {
-    handler ({ BMap, map }) {
-      console.log(BMap, map)
-      this.center.lng = 116.404
-      this.center.lat = 39.915
-      this.zoom = 15
-    },
-    setcenter (lng, lat) {
-      this.center.lng = lng
-      this.cnter.lat = lat
-    }
+
   },
   created () {
 

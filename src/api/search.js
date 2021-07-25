@@ -15,3 +15,15 @@ export function postSearch (params) {
     }
   })
 }
+export function getRainData (params) {
+  return request({
+    method: 'GET',
+    url: `https://api.seniverse.com/v4?${params}`
+  })
+}
+export function getRain (query) {
+  return request({
+    method: 'GET',
+    url: `https://api.seniverse.com/v4?${query}`
+  })
+}

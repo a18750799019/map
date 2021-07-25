@@ -24,10 +24,29 @@
                @click='getPositions(form)'></i>
           </el-form>
         </div>
+        <div class="contentContainer">
+          <div class="content"
+               v-for="n in 15"
+               :key="n">
+            <div class="leftContent">
+              <div class="icon">{{n}}</div>
+              <div class="middleContent">
+                <div><span>闽江公园</span></div>
+                <div><span>福州市</span></div>
+              </div>
+            </div>
+
+            <div class="rightContent">right</div>
+          </div>
+        </div>
         <div>
           <div>
 
           </div>
+          <el-pagination page-size=5
+                         layout="prev, pager, next"
+                         :total="50">
+          </el-pagination>
         </div>
       </el-tab-pane>
     </el-tabs>
@@ -68,6 +87,33 @@ export default {
 }
 </script>
 <style  scoped>
+.contentContainer {
+  overflow: auto;
+  height: 450px;
+}
+.rightContent {
+  margin-right: 25px;
+  align-self: center;
+}
+.middleContent {
+  margin-left: 25px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.leftContent {
+  display: flex;
+}
+.leftContent .icon {
+  align-self: center;
+  margin-left: 25px;
+}
+/* .leftIcon {
+  width: 40px;
+  height: 100%;
+  color: #fff;
+} */
 .left {
   height: calc(100% - 70px);
   position: absolute;
@@ -91,9 +137,9 @@ export default {
   margin-left: 5px !important;
   margin-top: 10px !important;
 }
-::v-deep .el-tabs__nav-scroll{
-  width: 50%!important;
-  margin: 0 auto!important;
+::v-deep .el-tabs__nav-scroll {
+  width: 50% !important;
+  margin: 0 auto !important;
   margin-left: 180px !important;
 }
 </style>
